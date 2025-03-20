@@ -24,7 +24,7 @@ export default function InvitePage() {
                         <InputIcon>
                             <Link className="size-5"/>
                         </InputIcon>
-                        <InputField type="text" value="https://devstage.com.br/invite/123456" readOnly />
+                        
                     <IconButton >
                         <Copy />
                     </IconButton>
