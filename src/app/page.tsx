@@ -8,9 +8,12 @@ export default function Home() {
   return (
     
         <main className="max-w-[1240px] mx-auto px-5 py-8 md:py-0">
-      <div className="min-h-dvh flex flex-col justify-center gap-16">
-        hi
-        <div className="font-heading flex flex-col gap-8 items-center text-center">
+      <div className="min-h-dvh flex flex-col justify-center items-center text-2xl">
+
+        <div className="p-[-20]">Hi I am</div>
+        <div className="font-typographica text-7xl items-center text-center
+        bg-gradient-to-r from-purple to-danger bg-clip-text text-transparent"
+        >
           SAROLANDA
         </div>
         web developer 

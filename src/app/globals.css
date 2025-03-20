@@ -2,8 +2,8 @@
 
 @theme {
     --color-blue: #6F9DE2;
-    --color-purple: #9871f3;
-    --color-danger: #F05D6C;
+    --color-purple: #9871F3;
+    --color-danger: #FF90B0;
 
     --color-gray-100: #DAE4F2;
     --color-gray-200: #C8D0DA;
@@ -14,8 +14,8 @@
     --color-gray-800: #13161B;
     --color-gray-900: #121212;
 
-    --font-heading: var(--font-typographica);
+    --font-typographica: var(--font-typographica);
     --font-sans: var(--font-montserrat);
-
+    
     --radius-xl: 0.625rem;
 }
