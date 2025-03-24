@@ -51,8 +51,13 @@ export default function Home() {
             {/* FIM DA HERO SECTION */}
 
             {/* INICIO DE SKILLS */}
+            <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row"> 
+            aqui é o texto
+            <div className="flex flex-col gap-10 w-full max-w-[500px]">
+            <div className="space-y-2">
+
             <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
-                <div className="grid gap-3 md:grid-cols-3">
+                <div className="grid gap-2 md:grid-cols-2">
                     <div className="relative rounded-xl p-px bg-gradient-to-br from-purple-500 to-danger">
                         <div className="relative rounded-xl">
                             {/* BORDA DO GRADIENTE  */}
@@ -75,14 +80,14 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="relative rounded-xl p-px bg-gradient-to-br from-purple-500 to-danger">
+                    <div className="group relative rounded-xl p-px bg-gradient-to-br from-purple-500 to-danger">
                         <div className="relative rounded-xl">
                             {/* BORDA DO GRADIENTE */}
                             <div className="absolute -inset-px bg-gradient-to-br from-purple-500 to-danger rounded-xl -z-10"></div>
 
                             {/* COR DO CONTAINER */}
-                            <div className="bg-[#1E1E1E] px-4 py-7 flex flex-col items-start gap-1 rounded-xl border border-transparent">
-                                <span className="font-heading text-2xl font-semibold text-gray-200 leading-none">
+                            <div className="group-hover:bg-[#000000] bg-[#1E1E1E]  px-4 py-7 flex flex-col items-start gap-1 rounded-xl border border-transparent">
+                                <span className=" font-heading text-2xl font-semibold text-gray-200 leading-none">
                                 <Image src="./JS.svg" alt="JAVASCRIPT" width={70} height={70} />
                                     Javascript
                                 </span>
@@ -113,6 +118,9 @@ export default function Home() {
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                    </div>
+                    </div>
                     </div>
                 </div>
             </div>
