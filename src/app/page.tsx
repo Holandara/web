@@ -86,7 +86,7 @@ export default function Home() {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true }}
-                    className="w-full md:w-1/2 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-6 px-4"
+                    className="w-full md:w-1/2 grid sm:grid-cols-1 grid-cols-2 lg:grid-cols-2 gap-6 px-4"
                 >
                     {/* Javascript */}
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
