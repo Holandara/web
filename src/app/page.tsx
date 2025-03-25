@@ -4,6 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import SkillCard from '@/app/components/skillcard';
 import JSIcon from './public/JS.svg'; // Importar o icone do JS
+import ReactIcon from './public/reactlogo.svg'; // Importar o icone do React
+import TailwindIcon from './public/tailwind.svg'; // Importar o icone do Tailwind
+import FigmaIcon from './public/figma.svg'; // Importar o icone do Figma
+
 
 export default function Home() {
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0); // estado inicial
@@ -57,13 +61,18 @@ export default function Home() {
 
             <div className="align-text-top font-typographica text-7xl bg-gradient-to-r from-purple to-danger bg-clip-text text-transparent">
             SKILLS
+            <div>
+
             </div>
+
+            </div>
+            
             <div className="flex flex-col gap-10 w-full max-w-[500px]">
             <div className="space-y-2">
                 <div className="grid gap-2 md:grid-cols-2">
                 <SkillCard
-                                title="Javascript"
                                 icon={JSIcon}
+                                title="Javascript"
                                 items={[
                                     "Lógica de programação",
                                     "Estrutura de dados",
@@ -72,35 +81,39 @@ export default function Home() {
                 />
 
                     <SkillCard
-                                title="Javascript"
-                                icon={JSIcon}
+                                icon={ReactIcon}
+                                title="React JS"
                                 items={[
-                                    "Lógica de programação",
-                                    "Estrutura de dados",
-                                    "API's"
+                                    "UIX Design",
+                                    "React Hooks",
+                                    "Styled Components"
                                 ]}
                 />
                     <SkillCard
-                                title="Javascript"
-                                icon={JSIcon}
+                                icon={TailwindIcon}
+                                title="Tailwind CSS"
                                 items={[
-                                    "Lógica de programação",
-                                    "Estrutura de dados",
-                                    "API's"
+                                    "UI/UX Design",
+                                    "Componentes",
+                                    "Responsividade",
+                                    "Animações"
                                 ]}
                 />
                     <SkillCard
-                                title="Javascript"
-                                icon={JSIcon}
-                                items={[
-                                    "Lógica de programação",
-                                    "Estrutura de dados",
-                                    "API's"
-                                ]}
-                />
-                </div>
-                    </div>
                     
+                                icon={FigmaIcon}
+                                title="Figma"
+                                items={[
+                                    
+                                    "Wireframes",
+                                    "Prototipagem",
+                                    "UI/UX Design",
+                                    "Design System"
+                                ]}
+                />
+
+                </div>
+                    </div>    
                     </div>
                     </div>
         </main>
