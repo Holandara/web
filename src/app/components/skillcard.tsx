@@ -1,42 +1,41 @@
-import React from 'react';
+// components/skillcard.tsx
+import { motion } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
 
 interface SkillCardProps {
-  icon: StaticImageData; // imagem do icone
-  title: string;         // titulo
-  items: string[];      // lista de itens
-  gradientFrom?: string;// cor do gradiente
-  gradientTo?: string;  // cor do gradiente
+  title: string;
+  icon: StaticImageData;
+  items: string[];
 }
 
-const SkillCard: React.FC<SkillCardProps> = ({
-  icon,
-  title,
-  items,
-  gradientFrom = 'from-purple-500',
-  gradientTo = 'to-danger',
-}) => {
+export const SkillCard = ({ title, icon, items }: SkillCardProps) => {
   return (
-    <div className={`group relative rounded-xl p-px bg-gradient-to-br ${gradientFrom} ${gradientTo}`}>
-      <div className="relative rounded-xl">
-        {/* BORDA DO GRADIENTE */}
-        <div className={`absolute -inset-px bg-gradient-to-br ${gradientFrom} ${gradientTo} rounded-xl -z-10`} />
-
-        {/* COR DO CONTAINER */}
-        <div className="group-hover:bg-[#000000] bg-[#1E1E1E] px-4 py-7 flex flex-col items-start gap-1 rounded-xl border border-transparent">
-          <span className="font-heading text-2xl font-semibold text-gray-200 leading-none flex-col items-center gap-2">
-            <Image src={icon} alt={title} width={70} height={70} />
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ scale: 1.04 }}
+      className="group relative rounded-xl p-px bg-gradient-to-br from-purple-500 to-danger aspect-auto">
+      <div className="relative rounded-xl h-full"> 
+        <div className="absolute -inset-px bg-gradient-to-br from-purple-500 to-danger rounded-xl -z-10" />
+        <div className="group-hover:bg-black bg-[#1E1E1E] h-full px-4 py-7 flex flex-col items-start gap-1 rounded-xl border border-transparent"> 
+          <span className="font-heading text-2xl font-semibold text-gray-200 leading-none flex items-start gap-3">
+            <Image 
+              src={icon} 
+              alt={title} 
+              width={48}
+              height={48}
+              className="inline-block object-contain"
+            />
             {title}
           </span>
-          <ul className="text-sm text-gray-300 leading-none text-justify">
+          <ul className="text-sm text-gray-300 leading-none text-justify mt-2">
             {items.map((item, index) => (
-              <li key={index}>• {item}</li> //pontinhos nas linhas
+              <li key={index} className="mb-1">• {item}</li>
             ))}
           </ul>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
-
-export default SkillCard;
