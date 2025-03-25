@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
+
 export default function Home() {
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0); // estado inicial
     const roles = [
@@ -15,14 +16,14 @@ export default function Home() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
-        }, 3000);
+        }, 2000);
 
         return () => clearInterval(interval); // limpar o intervalo
     }, []);
 
     return (
         <main className="max-w-[1240px] mx-auto px-5 py-8 md:py-0">
-            <div className="bg-clip-border z-10 min-h-dvh flex flex-col justify-center items-center text-2xl">
+            <div className="bg-clip-border z-10 h-screen flex flex-col justify-center items-center text-2xl">
                 <div className="justify-start">Hi I am</div>
                 <div
                     className="font-typographica text-7xl items-center text-center
@@ -49,19 +50,23 @@ export default function Home() {
                 </div>
             </div>
             {/* FIM DA HERO SECTION */}
-
+            
             {/* INICIO DE SKILLS */}
-            <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row"> 
-            aqui é o texto
+            <div className="h-screen flex items-center justify-between gap-16 flex-col md:flex-row"> 
+
+            <div className="font-typographica text-7xl
+          bg-gradient-to-r from-purple to-danger bg-clip-text text-transparent">
+            SKILLS
+            </div>
             <div className="flex flex-col gap-10 w-full max-w-[500px]">
             <div className="space-y-2">
 
-            <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
+            <div className="h-screen flex items-center justify-between gap-16 flex-col md:flex-row">
                 <div className="grid gap-2 md:grid-cols-2">
                     <div className="relative rounded-xl p-px bg-gradient-to-br from-purple-500 to-danger">
                         <div className="relative rounded-xl">
                             {/* BORDA DO GRADIENTE  */}
-                            <div className="absolute -inset-px bg-gradient-to-br from-purple-500 to-danger rounded-xl -z-10"></div>
+                            <div className="absolute -inset-px bg-gradient-to-br from-purple-500 to-danger rounded-xl -z-10" />
 
                             {/* COR DO CONTAINER */}
 
@@ -83,7 +88,7 @@ export default function Home() {
                     <div className="group relative rounded-xl p-px bg-gradient-to-br from-purple-500 to-danger">
                         <div className="relative rounded-xl">
                             {/* BORDA DO GRADIENTE */}
-                            <div className="absolute -inset-px bg-gradient-to-br from-purple-500 to-danger rounded-xl -z-10"></div>
+                            <div className="absolute -inset-px bg-gradient-to-br from-purple-500 to-danger rounded-xl -z-10" />
 
                             {/* COR DO CONTAINER */}
                             <div className="group-hover:bg-[#000000] bg-[#1E1E1E]  px-4 py-7 flex flex-col items-start gap-1 rounded-xl border border-transparent">
@@ -103,7 +108,7 @@ export default function Home() {
                     <div className="relative rounded-xl p-px bg-gradient-to-br from-purple-500 to-danger">
                         <div className="relative rounded-xl">
                             {/* BORDA DO GRADIENTE  */}
-                            <div className="absolute -inset-px bg-gradient-to-br from-purple-500 to-danger rounded-xl -z-10"></div>
+                            <div className="absolute -inset-px bg-gradient-to-br from-purple-500 to-danger rounded-xl -z-10" />
 
                             {/* COR DO CONTAINER */}
                             <div className="bg-[#1E1E1E] px-4 py-7 flex flex-col items-start gap-1 rounded-xl border border-transparent">
