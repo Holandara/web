@@ -6,6 +6,8 @@ import JSIcon from './public/JS.svg';
 import ReactIcon from './public/reactlogo.svg';
 import TailwindIcon from './public/tailwind.svg';
 import FigmaIcon from './public/figma.svg';
+import { SoftSkill } from '@/app/components/softskills';
+
 
 export default function Home() {
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
@@ -38,7 +40,7 @@ export default function Home() {
     return (
         <main className="max-w-[1240px] mx-auto px-5 py-8 md:py-0">
             {/* Hero Section */}
-            <div className="bg-clip-border z-10 h-screen flex flex-col justify-center items-center text-2xl">
+            <div className="bg-clip-border z-10 h-screen flex flex-col justify-center items-center text-2xl"> 
                 <div className="justify-start">Hi I am</div>
                 <div className="font-typographica text-7xl items-center text-center bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
                     SAROLANDA
@@ -72,11 +74,41 @@ export default function Home() {
                     className="md:sticky md:top-1/2 md:-translate-y-1/2 md:w-1/3 px-4"
                 >
                     <div className="font-typographica text-5xl md:text-7xl bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
-                        SKILLS
+                        HARD SKILLS
                     </div>
-                    <div className="font-sans text-gray-300 mt-4 text-base">
-                        Algumas das minhas habilidades envolvem desenvolvimento web e design de interfaces. 
-                        Além disso, tenho experiência com ferramentas de design como o Figma, e desenvolvimento de aplicações web com React JS.
+                    <div className="grid-flow-row-dense w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-1 px-1">
+
+                    <div className="pt-4 col-span-2 text-2xl">
+                    <div className="bg-amber-50 h-1 w-10"/>
+                    Soft Skills
+                    </div>
+                        <div className="col-span-2">
+                        <SoftSkill
+                        title="Inglês Avançado"
+                        />
+                        </div>
+                        <SoftSkill
+                        title="Scrum"
+                        />
+                        <div className="col-span-2">
+                        <SoftSkill
+                        title="Desenvolvimento ágil"
+                        />
+                        </div>
+                        <SoftSkill
+                        title="Comunicação"
+                        />
+                        <div className="col-span-full">
+                        <SoftSkill 
+                        title="Trabalho em equipe"
+                        />
+                        </div>
+                        <div className="col-span-full">
+                        <SoftSkill 
+                        title="Proatividade"
+                        />
+                        </div>
+                        
                     </div>
                 </motion.div>
 
