@@ -3,13 +3,11 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import localFont from 'next/font/local';
 
-// Carregando a fonte local
 const typoGraphica = localFont({
-  src: './fonts/TypoGraphica_demo.otf', // Caminho relativo ao arquivo de fonte
-  variable: '--font-typographica', // Nome da variável CSS para a fonte
+  src: './fonts/TypoGraphica_demo.otf',
+  variable: '--font-typographica',
 });
 
-// Configuração da fonte Montserrat do Google Fonts
 const montserrat = Montserrat({
   weight: ['400', '600'],
   subsets: ['latin'],
@@ -28,8 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${typoGraphica.variable} ${montserrat.variable}`}>
-      <body className="bg-gray-900 text-gray-100 antialiased bg-no-repeat md:bg-right-top bg-top">
-        <main className="max-w-[1240px] mx-auto px-5 py-8 md:py-0">
+      <body className="bg-gray-900 text-gray-100 antialiased relative">
+        {/* Conteúdo principal (z-index baixo) */}
+        <main className="max-w-[1240px] mx-auto px-5 py-8 md:py-0 relative z-0">
           {children}
         </main>
       </body>

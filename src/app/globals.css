@@ -23,3 +23,24 @@
     --breakpoint-sm: 30rem;
     
 }
+
+/* Scrollbar para navegadores WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1f2937; /* Cor do fundo (gray-800) */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #8b5cf6; /* Cor do thumb (purple-500) */
+    border-radius: 9999px; /* Arredondamento total */
+  }
+  
+  /* Scrollbar para Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #8b5cf6 #1f2937; /* thumb e track */
+  }

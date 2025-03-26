@@ -7,7 +7,8 @@ import ReactIcon from './public/reactlogo.svg';
 import TailwindIcon from './public/tailwind.svg';
 import FigmaIcon from './public/figma.svg';
 import { SoftSkill } from '@/app/components/softskills';
-
+import NodeIcon  from './public/nodejs.svg';
+import TSIcon  from './public/typescript.svg';
 
 export default function Home() {
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
@@ -41,7 +42,7 @@ export default function Home() {
         <main className="max-w-[1240px] mx-auto px-5 py-8 md:py-0">
             {/* Hero Section */}
             <div className="bg-clip-border z-10 h-screen flex flex-col justify-center items-center text-2xl"> 
-                <div className="justify-start">Hi I am</div>
+                <div className="justify-start">Oie! Eu me chamo</div>
                 <div className="font-typographica text-7xl items-center text-center bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
                     SAROLANDA
                 </div>
@@ -156,10 +157,10 @@ export default function Home() {
                         />
                     </motion.div>
 
-                    {/* Adicione quantos cards quiser abaixo - todos manterão o mesmo tamanho */}
+                    
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <SkillCard
-                            icon={FigmaIcon}
+                            icon={NodeIcon}
                             title="Node.js"
                             items={["Servidores", "APIs REST", "Conexão com bancos de dados"]}
                         />
@@ -167,9 +168,9 @@ export default function Home() {
 
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <SkillCard
-                            icon={FigmaIcon}
+                            icon={TSIcon}
                             title="TypeScript"
-                            items={["Tipagem estática", "Interfaces", "Generics"]}
+                            items={["Interfaces", "Lógica de Programação, ","Estrutura de Dados"]}
                         />
                     </motion.div>
 
