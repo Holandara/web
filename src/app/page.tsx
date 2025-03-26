@@ -80,13 +80,13 @@ export default function Home() {
                     </div>
                 </motion.div>
 
-                {/* Grid de Skills - Agora com scroll vertical quando necessário */}
+                {/* Grid de Skills */}
                 <motion.div
                     variants={container}
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true }}
-                    className="w-full md:w-1/2 grid sm:grid-cols-1 grid-cols-2 lg:grid-cols-2 gap-6 px-4"
+                    className="w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-6 px-4"
                 >
                     {/* Javascript */}
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
@@ -140,6 +140,8 @@ export default function Home() {
                             items={["Tipagem estática", "Interfaces", "Generics"]}
                         />
                     </motion.div>
+
+                    
                 </motion.div>
             </div>
         </main>
