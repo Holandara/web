@@ -66,7 +66,7 @@ export default function InvitePage() {
                             </span>
                             <span className="text-sm text-gray-300 leading-none text-center">
                                  Posição no ranking 
-                            </span>
+                            </span> 
                         </div>
                     </div>
                 </div> 
