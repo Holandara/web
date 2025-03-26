@@ -9,6 +9,9 @@ import FigmaIcon from './public/figma.svg';
 import { SoftSkill } from '@/app/components/softskills';
 import NodeIcon  from './public/nodejs.svg';
 import TSIcon  from './public/typescript.svg';
+import FlutterIcon  from './public/flutter.svg';
+import GitIcon  from './public/git.svg';
+import { Projetos } from '@/app/components/projetos';
 
 export default function Home() {
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
@@ -27,8 +30,8 @@ export default function Home() {
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.3
+                staggerChildren: 0.5,
+                delayChildren: 0.5
             }
         }
     };
@@ -41,7 +44,7 @@ export default function Home() {
     return (
         <main className="max-w-[1240px] mx-auto px-5 py-8 md:py-0">
             {/* Hero Section */}
-            <div className="bg-clip-border z-10 h-screen flex flex-col justify-center items-center text-2xl"> 
+            <div className="bg-clip-border z-10 h-screen flex flex-col justify-center items-center text-2xl "> 
                 <div className="justify-start">Oie! Eu me chamo</div>
                 <div className="font-typographica text-7xl items-center text-center bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
                     SAROLANDA
@@ -66,7 +69,7 @@ export default function Home() {
             </div>
 
             {/* Skills Section */}
-            <div className="min-h-screen flex flex-col md:flex-row items-start md:items-center gap-8 py-12"> 
+            <div className="min-h-screen flex flex-col md:flex-row items-start md:items-top gap-8  mt-50"> 
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -119,7 +122,7 @@ export default function Home() {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true }}
-                    className="w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-6 px-4"
+                    className="w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-6"
                 >
                     {/* Javascript */}
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
@@ -157,7 +160,7 @@ export default function Home() {
                         />
                     </motion.div>
 
-                    
+                    {/* Node.js */}
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <SkillCard
                             icon={NodeIcon}
@@ -166,6 +169,7 @@ export default function Home() {
                         />
                     </motion.div>
 
+                    {/* TypeScript */}
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <SkillCard
                             icon={TSIcon}
@@ -174,7 +178,85 @@ export default function Home() {
                         />
                     </motion.div>
 
+                    {/* Git */}
+                    <motion.div variants={item} whileHover={{ scale: 1.04 }}>
+                        <SkillCard
+                            icon={GitIcon}
+                            title="Git"
+                            items={["Controle de versão", "Branches", "Pull Requests", "Issues"]}
+                        />
+                    </motion.div>
+
+                    {/*flutter */}
+                    <motion.div variants={item} whileHover={{ scale: 1.04 }}>
+                        <SkillCard
+                            icon={FlutterIcon}
+                            title="Flutter"
+                            items={["UI/UX Design", "Componentes", "Responsividade", "Animações"]}
+                        />
+                    </motion.div>
+                </motion.div>
+            </div>
+            
+            
+            {/* PROJETOS */}
+            <div className="min-h-screen flex flex-col md:flex-row items-start md:items-top gap-8 py-12 mt-50"> 
+                
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="md:sticky md:top-1/2 md:-translate-y-1/2 md:w-1/3 px-4 py-5 mb-1"
+                >
                     
+                    <div className="font-typographica text-5xl md:text-7xl bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
+                        PROJETOS
+                    </div>
+                    <div className="bg-amber-50 h-1 w-10"/>
+                    <div className="grid-flow-row-dense w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-1 px-1">
+                    </div>
+                </motion.div>
+
+                {/* Grid de Projetos */}
+                <motion.div
+                    variants={container}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    className="w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-6 px-4"
+                >
+
+                    <motion.div variants={item} whileHover={{ scale: 1.04 }}>
+                        <Projetos
+
+                            icon={ReactIcon}
+                            title="Aurora"
+                            items={["Projeto de um site de uma empresa de tecnologia"]}     
+                            habilidades={["Figma", "Flutter", "React JS", "Tailwind CSS"]}  
+                        />
+                    </motion.div>
+
+                    <motion.div variants={item} whileHover={{ scale: 1.04 }}>
+                        <Projetos
+
+                            icon={ReactIcon}
+                            title="Aurora"
+                            items={["Projeto de um site de uma empresa de tecnologia"]}     
+                            habilidades={["Figma", "Flutter", "React JS", "Tailwind CSS"]}  
+                        />
+                    </motion.div>
+
+                    <motion.div variants={item} whileHover={{ scale: 1.04 }}>
+                        <Projetos
+
+                            icon={ReactIcon}
+                            title="Aurora"
+                            items={["Projeto de um site de uma empresa de tecnologia"]}     
+                            habilidades={["Figma", "Flutter", "React JS", "Tailwind CSS"]}  
+                        />
+                    </motion.div>
+
                 </motion.div>
             </div>
         </main>

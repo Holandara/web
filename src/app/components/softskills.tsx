@@ -6,7 +6,7 @@ interface SoftSkillsProps {
   title: string; 
 }
 
-export const SoftSkill = ({title }: SoftSkillProps) => {
+export const SoftSkill = ({title, item1, item2, item3 }: SoftSkillProps) => {
   return (
     
     <motion.div
@@ -14,8 +14,8 @@ export const SoftSkill = ({title }: SoftSkillProps) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       whileHover={{ scale: 1.04 }}
-      className="group"> 
-      <div className="relative rounded-xl "> 
+      className="group "> 
+      <div className="relative rounded-xl shadow-xl "> 
           <span className=" border-1 border-gray-400 group-hover:bg-purple group-hover:border-purple group-hover:text-black delay-20 
           text-gray-200 text-xs font-medium  px-2.5 py-0.5  rounded-xl dark:bg-gray-600"
           >
