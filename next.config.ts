@@ -1,18 +1,25 @@
 // next.config.ts
-import { type Configuration } from 'webpack';
+import type { NextConfig } from 'next';
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   images: {
     domains: [],
   },
-  webpack: (config: Configuration) => {
-    config.module?.rules?.push({
-      test: /\.svg$/i,
-      issuer: /\.[jt]sx?$/,
+  webpack: (config: any, { isServer }: { isServer: boolean }) => {
+    if (!isServer) {
+      config.resolve.fallback = { 
+        ...config.resolve.fallback,
+        fs: false 
+      };
+    }
+    
+    config.module.rules.push({
+      test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
+
     return config;
-  },
+  }
 };
 
 export default nextConfig;
