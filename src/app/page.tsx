@@ -49,7 +49,7 @@ export default function Home() {
             <div className="bg-clip-border z-10 h-screen flex flex-col justify-center items-center text-2xl "> 
                 <div className="justify-start">Oie! Eu me chamo</div>
                 <div className="font-typographica text-7xl items-center text-center bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
-                    SAROLANDA
+                    SAROLANDA teste
                 </div>
 
                 <div className="flex items-center justify-center gap-2 mt-4 text-xl md:text-2xl">

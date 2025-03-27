@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Image, { type StaticImageData } from 'next/image';
 import { SoftSkill } from '@/app/components/softskills';
 
+
 interface ProjetosProps {
   title: string;
   icon: StaticImageData;
