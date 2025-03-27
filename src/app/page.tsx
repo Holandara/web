@@ -51,6 +51,9 @@ export default function Home() {
                 <div className="font-typographica text-7xl items-center text-center bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
                     SAROLANDA teste
                 </div>
+                <div className="w-20 h-20">
+  <JSIcon className="w-full h-full text-red-500" />
+</div>
 
                 <div className="flex items-center justify-center gap-2 mt-4 text-xl md:text-2xl">
                     <div className="relative h-10 inline-flex items-center">
@@ -116,7 +119,7 @@ export default function Home() {
                         </div>
                         
                     </div>
-                </motion.div>
+                </motion.div> 
 
                 {/* Grid de Skills */}
                 <motion.div
@@ -129,7 +132,7 @@ export default function Home() {
                     {/* Javascript */}
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <SkillCard
-                            icon={JSIcon}
+                            icon={<JSIcon className="w-12 h-12 text-yellow-400" />}
                             title="Javascript"
                             items={["Lógica de programação", "Estrutura de dados", "API's"]}
                         />
@@ -138,7 +141,7 @@ export default function Home() {
                     {/* React JS */}
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <SkillCard
-                            icon={ReactIcon}
+                            icon={<ReactIcon className="w-12 h-12 text-yellow-400" />}
                             title="React JS"
                             items={["UIX Design", "React Hooks", "Styled Components"]}
                         />
@@ -147,7 +150,7 @@ export default function Home() {
                     {/* Tailwind CSS */}
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <SkillCard
-                            icon={TailwindIcon}
+                            icon={<TailwindIcon className="w-12 h-12 text-yellow-400" />}
                             title="Tailwind CSS"
                             items={["UI/UX Design", "Componentes", "Responsividade", "Animações"]}
                         />
@@ -156,7 +159,7 @@ export default function Home() {
                     {/* Figma */}
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <SkillCard
-                            icon={FigmaIcon}
+                            icon={<FigmaIcon className="w-12 h-12 text-yellow-400" />}
                             title="Figma"
                             items={["Wireframes", "Prototipagem", "UI/UX Design", "Design System"]}
                         />
@@ -165,7 +168,7 @@ export default function Home() {
                     {/* Node.js */}
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <SkillCard
-                            icon={NodeIcon}
+                            icon={<NodeIcon className="w-12 h-12 text-yellow-400" />}
                             title="Node.js"
                             items={["Servidores", "APIs REST", "Conexão com bancos de dados"]}
                         />
@@ -174,7 +177,7 @@ export default function Home() {
                     {/* TypeScript */}
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <SkillCard
-                            icon={TSIcon}
+                            icon={<TSIcon className="w-12 h-12 text-yellow-400" />}
                             title="TypeScript"
                             items={["Interfaces", "Lógica de Programação, ","Estrutura de Dados"]}
                         />
@@ -183,7 +186,7 @@ export default function Home() {
                     {/* Git */}
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <SkillCard
-                            icon={GitIcon}
+                            icon={<GitIcon className="w-12 h-12 text-yellow-400" />}
                             title="Git"
                             items={["Controle de versão", "Branches", "Pull Requests", "Issues"]}
                         />
@@ -192,7 +195,7 @@ export default function Home() {
                     {/*flutter */}
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <SkillCard
-                            icon={FlutterIcon}
+                            icon={<FlutterIcon className="w-12 h-12 text-yellow-400" />}
                             title="Flutter"
                             items={["UI/UX Design", "Componentes", "Responsividade", "Animações"]}
                         />
