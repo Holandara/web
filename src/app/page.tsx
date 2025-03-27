@@ -240,7 +240,7 @@ export default function Home() {
 
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <Projetos
-                            icon={Curso} 
+                            icon={ReactIcon} 
                             title="Site de Cursos"
                             items={["Projeto de site de cursos presenciais de educação física"]}     
                             habilidades={["Figma", "React JS", "Tailwind CSS"]}  
