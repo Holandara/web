@@ -1,9 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
   images: {
     domains: [],
   },
-  webpack: (config) => {
+  webpack: (config: any) => { 
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
@@ -12,4 +13,4 @@ const nextConfig = {
   }
 };
 
-module.exports = nextConfig;
+export default nextConfig;
