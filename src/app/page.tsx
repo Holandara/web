@@ -2,18 +2,18 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { SkillCard } from '@/app/components/skillcard';
-import JSIcon from './public/JS.svg';
-import ReactIcon from './public/reactlogo.svg';
-import TailwindIcon from './public/tailwind.svg';
-import FigmaIcon from './public/figma.svg';
+import JSIcon from '@/assets/JS.svg';
+import ReactIcon from '@/assets/reactlogo.svg';
+import TailwindIcon from '@/assets/tailwind.svg';
+import FigmaIcon from '@/assets/figma.svg';
 import { SoftSkill } from '@/app/components/softskills';
-import NodeIcon  from './public/nodejs.svg';
-import TSIcon  from './public/typescript.svg';
-import FlutterIcon  from './public/flutter.svg';
-import GitIcon  from './public/git.svg';
+import NodeIcon  from '@/assets/nodejs.svg';
+import TSIcon  from '@/assets/typescript.svg';
+import FlutterIcon  from '@/assets/flutter.svg';
+import GitIcon  from '@/assets/git.svg';
 import { Projetos } from '@/app/components/projetos';
-import Aurora  from './public/aurora.svg';
-import Curso from './public/curso.svg';
+import Aurora  from '@/assets/aurora.svg';
+import Curso from '@/assets/curso.svg';
 
 export default function Home() {
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
