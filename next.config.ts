@@ -1,14 +1,15 @@
-// next.config.js
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     domains: [],
-    formats: ['image/avif', 'image/webp'], // Adicione suporte a formatos modernos
   },
-  webpack(config) {
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
     return config;
   }
-}
+};
+
+module.exports = nextConfig;
