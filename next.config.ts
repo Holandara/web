@@ -1,16 +1,18 @@
-import type { NextConfig } from 'next';
+// next.config.ts
+import { type Configuration } from 'webpack';
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   images: {
     domains: [],
   },
-  webpack: (config: any) => { 
-    config.module.rules.push({
-      test: /\.svg$/,
+  webpack: (config: Configuration) => {
+    config.module?.rules?.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
       use: ['@svgr/webpack'],
     });
     return config;
-  }
+  },
 };
 
 export default nextConfig;
