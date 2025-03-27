@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Image, { StaticImageData } from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 import { SoftSkill } from '@/app/components/softskills';
 
 interface ProjetosProps {
@@ -25,7 +25,7 @@ export const Projetos = ({ title, icon, items = [], habilidades }: ProjetosProps
               src={icon} 
               alt={title} 
               width={265}
-              height={190}
+              height={265}
               className="inline-block object-contain"
             />
             {title}

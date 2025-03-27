@@ -12,6 +12,8 @@ import TSIcon  from './public/typescript.svg';
 import FlutterIcon  from './public/flutter.svg';
 import GitIcon  from './public/git.svg';
 import { Projetos } from '@/app/components/projetos';
+import Aurora  from './public/aurora.svg';
+import Curso from './public/curso.svg';
 
 export default function Home() {
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
@@ -23,15 +25,15 @@ export default function Home() {
         }, 2000);
         return () => clearInterval(interval);
     }, []);
-
+ 
     // Animação para a seção de skills
     const container = {
         hidden: { opacity: 0 },
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.5,
-                delayChildren: 0.5
+                staggerChildren: 0.2,
+                delayChildren: 0.1
             }
         }
     };
@@ -73,7 +75,7 @@ export default function Home() {
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8 }}
+                    transition={{ duration: 0.01 }}
                     viewport={{ once: true }}
                     className="md:sticky md:top-1/2 md:-translate-y-1/2 md:w-1/3 px-4"
                 >
@@ -229,31 +231,28 @@ export default function Home() {
 
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <Projetos
-
-                            icon={ReactIcon}
+                            icon={Aurora}
                             title="Aurora"
-                            items={["Projeto de um site de uma empresa de tecnologia"]}     
-                            habilidades={["Figma", "Flutter", "React JS", "Tailwind CSS"]}  
+                            items={["Projeto de aplicativo para mulheres vítima de violência doméstica"]}     
+                            habilidades={["Figma", "Flutter", "ui/ux design"]}  
                         />
                     </motion.div>
 
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <Projetos
-
-                            icon={ReactIcon}
-                            title="Aurora"
-                            items={["Projeto de um site de uma empresa de tecnologia"]}     
-                            habilidades={["Figma", "Flutter", "React JS", "Tailwind CSS"]}  
+                            icon={Curso} 
+                            title="Site de Cursos"
+                            items={["Projeto de site de cursos presenciais de educação física"]}     
+                            habilidades={["Figma", "React JS", "Tailwind CSS"]}  
                         />
                     </motion.div>
 
                     <motion.div variants={item} whileHover={{ scale: 1.04 }}>
                         <Projetos
-
                             icon={ReactIcon}
-                            title="Aurora"
-                            items={["Projeto de um site de uma empresa de tecnologia"]}     
-                            habilidades={["Figma", "Flutter", "React JS", "Tailwind CSS"]}  
+                            title="Joguinho"
+                            items={["Joguinho feito num feriado de carnaval em Python, toda a arte e design foi feita por mim!"]}     
+                            habilidades={["PyGame", "Python", "ui/ux design", "Ilustração", "Sprites","Aseprite"]}  
                         />
                     </motion.div>
 
