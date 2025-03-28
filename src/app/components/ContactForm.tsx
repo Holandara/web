@@ -7,6 +7,11 @@ type FormData = {
   message: string;
 };
 
+type ApiResponse = {
+  message: string;
+  success: boolean;
+};
+
 type FormStatus = 'idle' | 'sending' | 'success' | 'error';
 
 export default function ContactForm() {
@@ -25,7 +30,7 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
-
+  
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
@@ -34,8 +39,10 @@ export default function ContactForm() {
         },
         body: JSON.stringify(formData),
       });
-
-      if (response.ok) {
+  
+      const data: ApiResponse = await response.json(); // Adicione esta linha
+      
+      if (data.success) { // Modifique esta condição
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
         setTimeout(() => setStatus('idle'), 3000);
@@ -47,7 +54,6 @@ export default function ContactForm() {
       setStatus('error');
     }
   };
-
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-4 text-gray-800">Contact Me</h2>

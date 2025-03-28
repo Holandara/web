@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { SkillCard } from "@/app/components/skillcard";
 import { SoftSkill } from "@/app/components/softskills";
 import { Projetos } from "@/app/components/projetos";
+import ContactForm from "@/app/components/ContactForm";
 import JSIcon from "./public/JS.svg";
 import ReactIcon from "./public/reactlogo.svg";
 import TailwindIcon from "./public/tailwind.svg";
@@ -15,10 +16,11 @@ import GitIcon from "./public/git.svg";
 import Aurora from "./public/aurora.gif";
 import Curso from "./public/curso.svg";
 
+
 const HeroSection = ({ roles, currentRoleIndex }: { roles: string[]; currentRoleIndex: number }) => (
     <div className="bg-clip-border z-10 h-screen flex flex-col justify-center items-center text-2xl">
         <div className="justify-start">Oie! Eu me chamo</div>
-        <div className="font-typographica text-7xl items-center text-center bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
+        <div className=" font-typographica text-7xl items-center text-center bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
             SAROLANDA
         </div>
         <div className="flex items-center justify-center gap-2 mt-4 text-xl md:text-2xl">
@@ -42,7 +44,7 @@ const HeroSection = ({ roles, currentRoleIndex }: { roles: string[]; currentRole
 
 const SkillsSection = () => {
     const container = {
-        hidden: { opacity: 0 },
+        hidden: { opacity: 0 }, //
         show: {
             opacity: 1,
             transition: {
@@ -206,6 +208,7 @@ export default function Home() {
             <HeroSection roles={roles} currentRoleIndex={currentRoleIndex} />
             <SkillsSection />
             <ProjectsSection />
+            <ContactForm />
         </main>
     );
 }
