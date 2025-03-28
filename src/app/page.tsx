@@ -12,7 +12,7 @@ import NodeIcon from "./public/nodejs.svg";
 import TSIcon from "./public/typescript.svg";
 import FlutterIcon from "./public/flutter.svg";
 import GitIcon from "./public/git.svg";
-import Aurora from "./public/aurora.svg";
+import Aurora from "./public/aurora.gif";
 import Curso from "./public/curso.svg";
 
 const HeroSection = ({ roles, currentRoleIndex }: { roles: string[]; currentRoleIndex: number }) => (
@@ -80,17 +80,19 @@ const SkillsSection = () => {
                 <div className="font-typographica text-5xl md:text-7xl bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
                     HARD SKILLS
                 </div>
-                <div className="grid-flow-row-dense w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-1 px-1">
+                <div className="grid-flow-row-dense w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-1 px-1 whitespace-nowrap">
                     <div className="pt-4 col-span-2 text-2xl">
                         <div className="bg-amber-50 h-1 w-10" />
                         Soft Skills
                     </div>
+                    <div className="gap-1">
                     <SoftSkill title="Inglês Avançado" />
                     <SoftSkill title="Scrum" />
                     <SoftSkill title="Desenvolvimento ágil" />
                     <SoftSkill title="Comunicação" />
                     <SoftSkill title="Trabalho em equipe" />
                     <SoftSkill title="Proatividade" />
+                    </div>
                 </div>
             </motion.div>
 
@@ -150,7 +152,7 @@ const ProjectsSection = () => {
             habilidades: ["PyGame", "Python", "ui/ux design", "Ilustração", "Sprites", "Aseprite"],
         },
     ];
-
+{/* PROJETOS */}
     return (
         <div className="min-h-screen flex flex-col md:flex-row items-start md:items-top gap-8 py-12 mt-50">
             <motion.div
@@ -187,7 +189,7 @@ const ProjectsSection = () => {
         </div>
     );
 };
-
+{/* Estrutura da página */}
 export default function Home() {
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
     const roles = ["Web Developer", "Frontend Developer", "UI/UX Designer", "React Developer"];

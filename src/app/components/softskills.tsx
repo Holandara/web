@@ -16,7 +16,7 @@ export const SoftSkill = ({title }: SoftSkillsProps) => {
       whileHover={{ scale: 1.1 }}
       className="group "> 
       <div className="relative rounded-xl shadow-xl "> 
-          <span className=" border-1 border-gray-400 group-hover:bg-purple group-hover:border-purple group-hover:text-white delay-20 
+          <span className=" gap-2 border-1 border-gray-400 group-hover:bg-purple group-hover:border-purple inline-block group-hover:text-white delay-20 
           text-gray-200 text-xs font-medium  px-2.5 py-0.5  rounded-xl dark:bg-gray-600"
           >
             {title}

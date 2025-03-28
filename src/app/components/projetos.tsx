@@ -26,7 +26,7 @@ export const Projetos = ({ title, icon, items = [], habilidades }: ProjetosProps
               alt={title} 
               width={265}
               height={265}
-              className="inline-block object-contain"
+              className="inline-block object-contain rounded-2xl"
             />
             {title}
           </span>
